@@ -10,7 +10,7 @@ const CartItem = ({item,setItem}) => {
             <img src={img} alt='Product Image' className='cart-img' />
             <div className='cart-des'>
                 <p style={{marginBottom:'5px'}}>Fall Limited Edition Sneakers</p>
-                <p>$125.00 x {item} <span style={{marginLeft:'2px',fontWeight:'bold',color:"black"}}> ${125*item}</span></p>
+                <p>$125.00 x {item} <span style={{marginLeft:'2px',fontWeight:'bold',color:"black"}}> $ {125*item}</span></p>
             </div>
         </div>
             <img onClick={()=>setItem(0)} src={DeleteIcon} alt='delete' className="delete-btn" />

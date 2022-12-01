@@ -78,7 +78,7 @@ function App() {
 
     <div style={{pointerEvents:toggler && 'none'}}  className="mx-auto col-lg-10 col-md-11 col-sm-12 app">
 
-      <Navbar screenWidth={screenWidth.innerWidth>500?null:screenWidth.innerWidth} item={cartItem} setItem={setCartItem} />
+      <Navbar screenWidth={screenWidth.innerWidth>601?null:screenWidth.innerWidth} item={cartItem} setItem={setCartItem} />
       <div className="line"></div>
       <div class="product-main-div mx-auto col-md-10 col-sm-12">
         <ImageSection screenWidth={screenWidth} thumbnails={thumbnailImages} mainImages={ProductImages} />

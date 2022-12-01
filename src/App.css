@@ -77,7 +77,7 @@
 .toggle-on{
   z-index: 1001;
   position: absolute;
-  top: 30px;
+  top: 34px;
   left: 20px;
 }
 .toggle-off{

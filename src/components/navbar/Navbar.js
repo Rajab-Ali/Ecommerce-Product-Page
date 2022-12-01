@@ -2,6 +2,7 @@ import React, { useEffect, useRef, useState } from 'react'
 import CartIcon from '../../assets/images/icon-cart.svg'
 import Avatar from '../../assets/images/image-avatar.png'
 import CartItem from '../cart Item/CartItem'
+import Logo from '../../assets/images/logo.svg'
 import './navbar.css'
 const Navbar = ({screenWidth=null, item, setItem}) => {
   const [cartToggler,setCartToggler] = useState(false)
@@ -13,7 +14,7 @@ const Navbar = ({screenWidth=null, item, setItem}) => {
   <div className="container-fluid">
     
       <a style={{marginLeft:'40px'}} className="navbar-brand me-auto mt-lg-0" >
-        <h2>sneakers</h2>
+        <img src={Logo} alt="Logo" />
       </a>
    
     <div  className="collapse navbar-collapse" >
@@ -50,8 +51,8 @@ const Navbar = ({screenWidth=null, item, setItem}) => {
         </a>
         <div
           style={{display:cartToggler? 'block':'none',
-          width:screenWidth && screenWidth-(screenWidth/100)*10,
-          left : screenWidth>400? -250-screenWidth/100*10:screenWidth<376?-250:screenWidth>500?180:-265,
+          width:screenWidth && screenWidth<500 && screenWidth-(screenWidth/100)*10,
+          left :screenWidth>530? -276 : screenWidth>400? -250-screenWidth/100*10:screenWidth<376?-250:screenWidth>500?180:-265,
         }}
           className="dropdown-menu"
         >
@@ -67,7 +68,7 @@ const Navbar = ({screenWidth=null, item, setItem}) => {
             }
             {
               item>0 && <div className='cart-btn-div'>
-                <button style={{marginTop:0}} className="btn btn-warning">Checkout</button>
+                <button style={{marginTop:0}} className="btn btn-warning w-100">Checkout</button>
               </div>
             }
           </div>
